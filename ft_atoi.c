@@ -30,7 +30,7 @@ int	ft_atoi(const char *str)
 			neg = -1;
 		i++;
 	}
-	while (str[i] >= '0' && str[i] <= '9')
+	while (str[i] && ft_isdigit(str[i]))
 	{
 		nb = nb * 10 + (str[i] - '0');
 		i++;
