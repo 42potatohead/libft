@@ -6,7 +6,7 @@
 /*   By: zabu-bak <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 20:10:13 by zabu-bak          #+#    #+#             */
-/*   Updated: 2024/08/31 01:46:18 by zabu-bak         ###   ########.fr       */
+/*   Updated: 2024/09/01 00:10:41 by zabu-bak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,5 +41,14 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n);
 void	*ft_calloc(size_t count, size_t size);
 char	*ft_strdup(const char *s1);
 int		ft_atoi(const char *str);
+char *ft_itoa(int n);
+void test(char *str, int i, int digit);
+char *ft_strtrim(char const *s1, char const *set);
+char *ft_strjoin(const char *s1, const char *s2);
+char *ft_strmapi(const char *s, char (*f)(unsigned int, char));
+void ft_striteri(char *s, void (*f)(unsigned int, char*));
+void ft_putchar_fd(char c, int fd);
+void ft_putstr_fd(char *s, int fd);
+void ft_putendl_fd(char *s, int fd);
 
 #endif
