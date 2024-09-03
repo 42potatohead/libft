@@ -6,7 +6,7 @@
 /*   By: zabu-bak <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/31 19:40:41 by zabu-bak          #+#    #+#             */
-/*   Updated: 2024/08/31 19:40:58 by zabu-bak         ###   ########.fr       */
+/*   Updated: 2024/09/02 22:59:29 by zabu-bak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,10 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 		return (NULL);
 	if (start > ft_strlen(s))
 		return (ft_strdup(""));
-	str = (char *)malloc(sizeof(char) * (len + 1));
+	if (ft_strlen(s) - start > len)
+		str = (char *)malloc(sizeof(char) * (len + 1));
+	else
+		str = (char *)malloc(sizeof(char) * (ft_strlen(s) - start + 1));
 	if (!str)
 		return (NULL);
 	i = 0;

@@ -6,7 +6,7 @@
 /*   By: zabu-bak <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/31 19:30:18 by zabu-bak          #+#    #+#             */
-/*   Updated: 2024/09/01 00:02:03 by zabu-bak         ###   ########.fr       */
+/*   Updated: 2024/09/03 01:17:21 by zabu-bak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,17 @@
 static int	get_num_len(int n)
 {
 	int	len;
-	int	temp;
 
-	len = 1;
-	temp = n;
-	if (n < 0)
+	len = 0;
+	if (n <= 0)
 	{
 		len++;
-		temp = -n;
 	}
-	while (temp /= 10)
+	while (n != 0)
+	{
+		n /= 10;
 		len++;
+	}
 	return (len);
 }
 
